@@ -3,7 +3,7 @@ const http = require('http');
 
 //connect to mongo db
 const mongoose = require('mongoose');
-const dbURI = 'mongodb+srv://puja_singh123:1234_abcd@cluster0.5zmjfh2.mongodb.net/myDatabase?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://<username>:<password>@cluster0.5zmjfh2.mongodb.net/myDatabase?retryWrites=true&w=majority';
 
 mongoose.connect(dbURI)
 .then(() => console.log('connected to db'))
