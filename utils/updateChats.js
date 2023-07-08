@@ -12,6 +12,8 @@ async function updateChats(roomId, username, text){
   // console.log(new_chat);
   await new_chat.save();
   let curr_chat = new_chat;
+
+  //update chats in rooms database
   let curr_room = await RoomModel.findOne({ _id: roomId });
   curr_room.chats = [...curr_room.chats, curr_chat._id];
   await curr_room.save();
